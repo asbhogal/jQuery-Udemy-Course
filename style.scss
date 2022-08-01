@@ -8,4 +8,5 @@
 
 .square {
     @include div-sizing;
+    background-color: red;
 }

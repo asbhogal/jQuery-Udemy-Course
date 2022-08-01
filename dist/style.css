@@ -1,6 +1,7 @@
 #circle {
   width: 150px;
   height: 150px;
+  margin: 10px;
   border-radius: 50%;
   background-color: green;
 }
@@ -8,4 +9,6 @@
 .square {
   width: 150px;
   height: 150px;
+  margin: 10px;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
