@@ -32,3 +32,7 @@ $("#circle").hover(function() {                                                 
 
 // WEBSITE STYLING
 
+$("#circle").click(function() {                                         // WHEN THE CIRCLE IS CLICKED, PARSE THE FOLLOWING
+    $("#circle").css("width", "400px");
+    $("#circle").css("background-color", "red");                        // RESTYLE THE CIRCLE BY ALTERING ITS CSS
+});
