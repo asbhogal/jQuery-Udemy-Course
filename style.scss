@@ -1,0 +1,11 @@
+@import "partials/mixins";
+
+#circle {
+    @include div-sizing;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.square {
+    @include div-sizing;
+}
