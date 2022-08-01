@@ -32,7 +32,23 @@ $("#circle").hover(function() {                                                 
 
 // WEBSITE STYLING
 
-$("#circle").click(function() {                                         // WHEN THE CIRCLE IS CLICKED, PARSE THE FOLLOWING
-    $("#circle").css("width", "400px");
-    $("#circle").css("background-color", "red");                        // RESTYLE THE CIRCLE BY ALTERING ITS CSS
+$("#circle").click(function() {                                         // WHEN THE CIRCLE IS CLICKED, PARSE THE FOLLOWING.
+    $("#circle").css("width", "400px");                                 // RESTYLE THE CIRCLE BY ALTERING ITS CSS
+    $("#circle").css("background-color", "red");                        // ie. CHANGE THE BACKGROUND COLOR TO RED
+    alert($("#circle").css("height"));                                  //PASSING THE PROPERTY PARAMETER, WITHOUT THE VALUE TO CHANGE IT TO, WILL JUST RETURN THE ORIGINAL VALUE. THIS TAKES PRECEDENCE OVER THE ABOVE TWO, WHICH ARE PARSED AFTER                 
 });
+
+$("#btn-body-width").click(function() {                                 //RETURNS THE WIDTH OF A PAGE AT ANY ONE TIME WHEN THE BUTTON IS CLICKED
+    alert($("body").css("width"));
+});
+
+$("div").click(function() {                                             // MAKES THE ELEMENTS WITHIN THE DIV DISAPPEAR WHEN IT IS CLICKED
+    $("div").css("display", "none");                                                                    // THIS IS MORE EFFICIENT THAN HAVING TO CREATE SEPARATE CLASSES FOR THE SQUARES. HOWEVER, THIS ALSO HIDES THE CIRCLE TOO.
+});                          
+    
+$("div").click(function() {
+    $(this).css("display", "none");
+});                                                             
+                                                                        // ENSURES ONLY THE ELEMENT CLICKED WITHIN THE DIV IS HIDDEN VIA CSS,ie. "this IS THE ELEMENT THAT HAS BEEN CLICKED"
+
+                                        
