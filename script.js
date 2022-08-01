@@ -11,3 +11,7 @@ $(".square").click(function() {
 $("div").click(function() {
     alert("div was clicked");
 });
+
+$("#circle").click(function() {
+    $("p").html("This text has changed");                     //SELECT THE HTML IN THE P CLASS
+});
