@@ -1,5 +1,7 @@
 // jQuery instructions begin with string $
 
+// CLICK/HOVER
+
 /*$("#circle").click(function() { // using string to select id and using click event to parse the following instruction
     alert("circle was clicked");
 }); 
@@ -27,3 +29,6 @@ $("#circle").hover(function() {
 $("#circle").hover(function() {                                                         // WHEN THE CIRCLE IS HOVERED OVER, PARSE THE FOLLOWING
     $("iframe").attr("src", "https://www.youtube.com/watch?v=BHACKCNDMW8") ;            // GET THE IFRAME ELEMENT AND CHANGE THE ATTRIBUTE FROM ITS ORIGINAL SOURCE TO THE FOLLOWING
 })*/
+
+// WEBSITE STYLING
+
