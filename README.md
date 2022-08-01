@@ -1,0 +1,1 @@
+Source code for the jQuery chapter in the Udemy course: The Complete Web Developer Course 2.0
