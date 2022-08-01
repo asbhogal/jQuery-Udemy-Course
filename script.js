@@ -1,6 +1,6 @@
 // jQuery instructions begin with string $
 
-/*$("#circle").click(function() { // using string to select id and using click event to parse the following instruction
+$("#circle").click(function() { // using string to select id and using click event to parse the following instruction
     alert("circle was clicked");
 }); 
 
