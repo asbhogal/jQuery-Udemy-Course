@@ -69,11 +69,19 @@ $("div").click(function() {
 });
 
 $("div").click(function(){                                              // PERFORMS SIMILAR TO THE CODE IN LINE 49
-    $(this).hide();
-});*/
+    $(this).hide();                                                     // FUNCTIONS ALWAYS REQUIRE PARENTHESIS, EVEN WITHOUT OPTIONS
+});
 
 $("div").click(function () {
     $(this).fadeOut("slow", function() {
         alert("FadeOut has finished");
     });
+});
+
+$("#fadeOutBtnTrigger").click(function() {                              // SELECTS THE BUTTON WITH THE ID fadeOutBtnTrigger. WHEN IT IS CLICKED, PARSE THE FOLLOWING
+    $("p").fadeOut();                                                   // FADE OUT THE CONTENTS OF THE p TAG IE. PARAGRAPH. THIS MAKES IT ESSENTIALLY THE SAME AS SETTING ITS DISPLAY TO NONE VIA CSS
+});*/
+
+$("#fadeInBtnTrigger").click(function () {                              // TO FIRST FADE IN TEXT, IT MUST BE HIDDEN TO START WITH. CHECK STYLESHEET FOR THIS
+    $(".fadeInText").fadeIn();
 });

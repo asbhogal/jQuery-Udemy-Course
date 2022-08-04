@@ -11,4 +11,8 @@
   height: 150px;
   margin: 10px;
   background-color: red;
+}
+
+p.fadeInText {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
