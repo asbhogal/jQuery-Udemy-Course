@@ -44,11 +44,15 @@ $("#btn-body-width").click(function() {                                 //RETURN
 
 $("div").click(function() {                                             // MAKES THE ELEMENTS WITHIN THE DIV DISAPPEAR WHEN IT IS CLICKED
     $("div").css("display", "none");                                                                    // THIS IS MORE EFFICIENT THAN HAVING TO CREATE SEPARATE CLASSES FOR THE SQUARES. HOWEVER, THIS ALSO HIDES THE CIRCLE TOO.
-});*/                          
+});                          
     
 $("div").click(function() {
     $(this).css("display", "none");
-});                                                             
+}); */
+
+$("div").click(function() {
+    alert("You clicked on a " + $(this).attr("id"));                    // AS THIS ONLY WORKS FOR ELEMENTS WITH AN ID, ELEMENTS WITH A CLASS WOULD REQUIRE AN IF STATEMENT
+});
                                                                         // ENSURES ONLY THE ELEMENT CLICKED WITHIN THE DIV IS HIDDEN VIA CSS,ie. "this IS THE ELEMENT THAT HAS BEEN CLICKED"
 
                                         
