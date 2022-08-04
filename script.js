@@ -32,7 +32,7 @@ $("#circle").hover(function() {                                                 
 
 // WEBSITE STYLING
 
-/*$("#circle").click(function() {                                         // WHEN THE CIRCLE IS CLICKED, PARSE THE FOLLOWING.
+/*$("#circle").click(function() {                                       // WHEN THE CIRCLE IS CLICKED, PARSE THE FOLLOWING.
     $("#circle").css("width", "400px");                                 // RESTYLE THE CIRCLE BY ALTERING ITS CSS
     $("#circle").css("background-color", "red");                        // ie. CHANGE THE BACKGROUND COLOR TO RED
     alert($("#circle").css("height"));                                  //PASSING THE PROPERTY PARAMETER, WITHOUT THE VALUE TO CHANGE IT TO, WILL JUST RETURN THE ORIGINAL VALUE. THIS TAKES PRECEDENCE OVER THE ABOVE TWO, WHICH ARE PARSED AFTER                 
@@ -43,16 +43,22 @@ $("#btn-body-width").click(function() {                                 //RETURN
 });
 
 $("div").click(function() {                                             // MAKES THE ELEMENTS WITHIN THE DIV DISAPPEAR WHEN IT IS CLICKED
-    $("div").css("display", "none");                                                                    // THIS IS MORE EFFICIENT THAN HAVING TO CREATE SEPARATE CLASSES FOR THE SQUARES. HOWEVER, THIS ALSO HIDES THE CIRCLE TOO.
+    $("div").css("display", "none");                                    // THIS IS MORE EFFICIENT THAN HAVING TO CREATE SEPARATE CLASSES FOR THE SQUARES. HOWEVER, THIS ALSO HIDES THE CIRCLE TOO.
 });                          
     
 $("div").click(function() {
-    $(this).css("display", "none");
-}); */
+    $(this).css("display", "none");                                     // ENSURES ONLY THE ELEMENT CLICKED WITHIN THE DIV IS HIDDEN VIA CSS,ie. "this IS THE ELEMENT THAT HAS BEEN CLICKED"
+});
 
 $("div").click(function() {
-    alert("You clicked on a " + $(this).attr("id"));                    // AS THIS ONLY WORKS FOR ELEMENTS WITH AN ID, ELEMENTS WITH A CLASS WOULD REQUIRE AN IF STATEMENT
+    alert("You clicked on a " + $(this).attr("id"));                    // AS THIS ONLY WORKS FOR ELEMENTS WITH AN ID, ELEMENTS WITH A CLASS WOULD REQUIRE AN IF STATEMENT - SEE BELOW
+});*/
+                                                                        
+$("div").click(function() {
+    if ($(this).attr("id") == "circle") {
+        alert("You clicked on a circle");
+    } else {
+        alert("You clicked on a square")                                // this KEYWORD IS A JAVASCRIPT AND jQUERY ONE
+    }
 });
-                                                                        // ENSURES ONLY THE ELEMENT CLICKED WITHIN THE DIV IS HIDDEN VIA CSS,ie. "this IS THE ELEMENT THAT HAS BEEN CLICKED"
-
                                         
