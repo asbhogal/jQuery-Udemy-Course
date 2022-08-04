@@ -71,3 +71,9 @@ $("div").click(function() {
 $("div").click(function(){                                              // PERFORMS SIMILAR TO THE CODE IN LINE 49
     $(this).hide();
 });*/
+
+$("div").click(function () {
+    $(this).fadeOut("slow", function() {
+        alert("FadeOut has finished");
+    });
+});
