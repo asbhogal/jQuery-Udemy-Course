@@ -2,7 +2,7 @@
 
 // CLICK/HOVER
 
-/*$("#circle").click(function() { // using string to select id and using click event to parse the following instruction
+/*$("#circle").click(function() {                                                       // using string to select id and using click event to parse the following instruction
     alert("circle was clicked");
 }); 
 
@@ -52,7 +52,7 @@ $("div").click(function() {
 
 $("div").click(function() {
     alert("You clicked on a " + $(this).attr("id"));                    // AS THIS ONLY WORKS FOR ELEMENTS WITH AN ID, ELEMENTS WITH A CLASS WOULD REQUIRE AN IF STATEMENT - SEE BELOW
-});*/
+});
                                                                         
 $("div").click(function() {
     if ($(this).attr("id") == "circle") {
@@ -60,5 +60,14 @@ $("div").click(function() {
     } else {
         alert("You clicked on a square")                                // this KEYWORD IS A JAVASCRIPT AND jQUERY ONE
     }
+});*/
+           
+// FADING CONTENT
+
+/*$("div").click(function() {
+    $(this).fadeOut();                                                  // FADE OUT THE PARTICULAR DIV ELEMENT WHEN IT IS CLICKED
 });
-                                        
+
+$("div").click(function(){                                              // PERFORMS SIMILAR TO THE CODE IN LINE 49
+    $(this).hide();
+});*/
