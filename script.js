@@ -88,11 +88,14 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
 
  // CREATING A BUTTON THAT WHEN CLICKED, EITHER FADE-INS THE RESPECTIVE p CONTENT IF IT ISN'T PRESENT, OR FADES IT OUT IF IT IS
 
- // METHOD ONE - FUNCTIONS AND CALLBACKS
+            // METHOD ONE - FUNCTIONS AND CALLBACKS
 
+            $("#toggle").click(function() {                                                     // BECAUSE JAVASCRIPT NEEDS TO KNOW FIRSTLY WHETHER THE CONTENT IS THERE TO BEGIN WITH, A CONDITIONAL IF STATEMENT MUST BE USED - LEVERAGING THE CSS DISPLAY PROPERTY WILL HELP WITH THIS CHECK
+                if ($("#toggle-text").css("display") == "none") {                               // IF THE CSS DISPLAY PROPERTY OF THE p ID ELEMENT IS EQUAL TO NONE...
+                    $("#toggle-text").fadeIn();                                                 // ...FADE THE ELEMENT IN
+                } else {                                                                        // OTHERWISE ...
+                    $("#toggle-text").fadeOut();                                                // ... FADE IT OUT - IF THE CSS DISPLAY PROPERTY IS NOT EQUAL TO NONE
+                }                                                                               
+            });  
 
-$("#toggle").click(function() {                                                     // BECAUSE JAVASCRIPT NEEDS TO KNOW FIRSTLY WHETHER THE CONTENT IS THERE TO BEGIN WITH, A CONDITIONAL IF STATEMENT MUST BE USED - LEVERAGING THE CSS DISPLAY PROPERTY WILL HELP WITH THIS CHECK
-                                                                                    // IF THE CONTENT IS PRESENT, PARSE THE FOLLOWING:
-})  
-                                                                                    // OTHERWISE, FADE IT OUT IF IT IS PRESENT
-
+            // METHOD TWO - 
