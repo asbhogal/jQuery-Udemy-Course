@@ -98,18 +98,22 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
                 }                                                                               
             }); */ 
 
-            // METHOD TWO - USING A VARIABLE, WHICH KEEPS TRACK OF THE STATE OF THE PARAGRAPH TEXT ELEMENT
+            // METHOD TWO - USING A VARIABLE, WHICH KEEPS TRACK OF THE STATE OF THE PARAGRAPH TEXT ELEMENT ON THE PAGE AND PARSING INSTRUCTIONS AS A RESULT
 
-            var textDisplaying = true;                                                          // CREATE A BOOLEAN VARIABLE AND ASSIGN IT THE VALUE OF TURE, SINCE BY DEFAULT THE CONTENT WILL DISPLAY ON PAGE LOAD
+            var textDisplaying = true;                                                          // CREATE A BOOLEAN VARIABLE AND ASSIGN IT THE VALUE OF TRUE, SINCE BY DEFAULT THE CONTENT WILL DISPLAY ON PAGE LOAD
             
-            $("#toggle").click(function() {
-                if (textDisplaying) {
-                    $("#toggle-text").fadeOut(function() {
-                        textDisplaying = false;
+            $("#toggle").click(function() {                                                     // WHEN THE TOGGLE BUTTON IS CLICKED, PERFORM THE FOLLOWING CONDITIONAL CHECK...
+                if (textDisplaying) {                                                           // IF THE VARIABLE IS TRUE, PARSE THE FOLLOWING... NB. - CHECKING THE DEFAULT VALUE OF THIS VARIABLE AGAINST TRUE DOESN'T REQUIRE THE == COMPARISON, AS BY DEFAULT IT IS TRUE. THIS IS THEREFORE OPTIONAL
+                    $("#toggle-text").fadeOut(function() {                                      // FADE OUT THE TOGGLE TEXT ELEMENT CONTENT AND PERFORM THE FOLLOWING CALLBACK:
+                        textDisplaying = false;                                                 // SET THE BOOLEAN VARIABLE TO FALSE. THIS IS TO ENSURE THE CHECK THEN PARSES TO THE 'ELSE' WHEN THE BUTTON TOGGLE IS TRIGGERED AGAIN
                     });
                 } else {
-                    $("#toggle-text").fadeIn(function() {
-                        textDisplaying = true;
+                    $("#toggle-text").fadeIn(function() {                                       // IF THE BOOLEAN VARIABLE IS SET TO FALSE, FADE IN THE CONTENTS OF THE TOGGLE TEXT ELEMENT, AND PERFORM THE FOLLOWING CALLBACK:
+                        textDisplaying = true;                                                  // CHANGE THE BOOLEAN VARIABLE BACK TO TRUE. THIS IS TO ENSURE THE CHECK THEN RETURNS BACK TO THE START, OTHERWISE THE CONDITIONS WON'T BE MET AND THE FADE-IN AND FADE-OUT WON'T PERFORM PROPERLY
                     });
-                }                                                                             // IF THE VARIABLE IS TRUE, PARSE THE FOLLOWING.... NB. - CHECKING THE DEFAULT VALUE DOESN'T REQUIRE THE == TRUE, THIS IS OPTIONAL      
+                }                                                                                
             });
+
+            // ALTHOUGH METHOD ONE IS GENERALLY NEATER, THERE ARE SITUATIONS WHERE THE INFORMATION CANNOT BE RETRIEVED FROM A CSS PROPERTY, MAKING METHOD TWO HERE IDEAL
+
+            // FADING CONTENT IS A SPECIFIC EXAMPLE OF THE GENERAL ANIMATING CONTENT - SEE BELOW
