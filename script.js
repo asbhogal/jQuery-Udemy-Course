@@ -2,7 +2,7 @@
 
 // CLICK/HOVER
 
-$("#circle").click(function() {                                                       // using string to select id and using click event to parse the following instruction
+/*$("#circle").click(function() {                                                       // using string to select id and using click event to parse the following instruction
     alert("circle was clicked");
 }); 
 
@@ -28,11 +28,11 @@ $("#circle").hover(function() {
 
 $("#circle").hover(function() {                                                         // WHEN THE CIRCLE IS HOVERED OVER, PARSE THE FOLLOWING
     $("iframe").attr("src", "https://www.youtube.com/watch?v=BHACKCNDMW8") ;            // GET THE IFRAME ELEMENT AND CHANGE THE ATTRIBUTE FROM ITS ORIGINAL SOURCE TO THE FOLLOWING
-})
+})*/
 
 // WEBSITE STYLING
 
-$("#circle").click(function() {                                       // WHEN THE CIRCLE IS CLICKED, PARSE THE FOLLOWING.
+/*$("#circle").click(function() {                                       // WHEN THE CIRCLE IS CLICKED, PARSE THE FOLLOWING.
     $("#circle").css("width", "400px");                                 // RESTYLE THE CIRCLE BY ALTERING ITS CSS
     $("#circle").css("background-color", "red");                        // ie. CHANGE THE BACKGROUND COLOR TO RED
     alert($("#circle").css("height"));                                  //PASSING THE PROPERTY PARAMETER, WITHOUT THE VALUE TO CHANGE IT TO, WILL JUST RETURN THE ORIGINAL VALUE. THIS TAKES PRECEDENCE OVER THE ABOVE TWO, WHICH ARE PARSED AFTER                 
@@ -60,11 +60,11 @@ $("div").click(function() {
     } else {
         alert("You clicked on a square")                                // this KEYWORD IS A JAVASCRIPT AND jQUERY ONE
     }
-});
+});*/
            
 // FADING CONTENT
 
-$("div").click(function() {
+/*$("div").click(function() {
     $(this).fadeOut();                                                  // FADE OUT THE PARTICULAR DIV ELEMENT WHEN IT IS CLICKED
 });
 
@@ -84,5 +84,15 @@ $("#fadeOutBtnTrigger").click(function() {                              // SELEC
 
 $("#fadeInBtnTrigger").click(function () {                              // TO FIRST FADE IN TEXT, IT MUST BE HIDDEN TO START WITH. CHECK STYLESHEET FOR THIS
     $(".fadeInText").fadeIn();
-});
+});*/
+
+ // CREATING A BUTTON THAT WHEN CLICKED, EITHER FADE-INS THE RESPECTIVE p CONTENT IF IT ISN'T PRESENT, OR FADES IT OUT IF IT IS
+
+ // METHOD ONE - FUNCTIONS AND CALLBACKS
+
+
+$("#toggle").click(function() {                                                     // BECAUSE JAVASCRIPT NEEDS TO KNOW FIRSTLY WHETHER THE CONTENT IS THERE TO BEGIN WITH, A CONDITIONAL IF STATEMENT MUST BE USED - LEVERAGING THE CSS DISPLAY PROPERTY WILL HELP WITH THIS CHECK
+                                                                                    // IF THE CONTENT IS PRESENT, PARSE THE FOLLOWING:
+})  
+                                                                                    // OTHERWISE, FADE IT OUT IF IT IS PRESENT
 
