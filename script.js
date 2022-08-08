@@ -6,7 +6,7 @@
     alert("circle was clicked");
 }); 
 
-$(".square").click(function() {
+$(".square").click(function() {                                                         // ie. WHEN THE SQUARE IS CLICKED, ALERT THE MESSAGE "square was clicked"
     alert("square was clicked");
 });
 
