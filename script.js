@@ -88,14 +88,28 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
 
  // CREATING A BUTTON THAT WHEN CLICKED, EITHER FADE-INS THE RESPECTIVE p CONTENT IF IT ISN'T PRESENT, OR FADES IT OUT IF IT IS
 
-            // METHOD ONE - FUNCTIONS AND CALLBACKS
+            // METHOD ONE - FUNCTIONS AND CSS
 
-            $("#toggle").click(function() {                                                     // BECAUSE JAVASCRIPT NEEDS TO KNOW FIRSTLY WHETHER THE CONTENT IS THERE TO BEGIN WITH, A CONDITIONAL IF STATEMENT MUST BE USED - LEVERAGING THE CSS DISPLAY PROPERTY WILL HELP WITH THIS CHECK
+            /*$("#toggle").click(function() {                                                   // BECAUSE JAVASCRIPT NEEDS TO KNOW FIRSTLY WHETHER THE CONTENT IS THERE TO BEGIN WITH, A CONDITIONAL IF STATEMENT MUST BE USED - LEVERAGING THE CSS DISPLAY PROPERTY WILL HELP WITH THIS CHECK
                 if ($("#toggle-text").css("display") == "none") {                               // IF THE CSS DISPLAY PROPERTY OF THE p ID ELEMENT IS EQUAL TO NONE...
                     $("#toggle-text").fadeIn();                                                 // ...FADE THE ELEMENT IN
                 } else {                                                                        // OTHERWISE ...
                     $("#toggle-text").fadeOut();                                                // ... FADE IT OUT - IF THE CSS DISPLAY PROPERTY IS NOT EQUAL TO NONE
                 }                                                                               
-            });  
+            }); */ 
 
-            // METHOD TWO - 
+            // METHOD TWO - USING A VARIABLE, WHICH KEEPS TRACK OF THE STATE OF THE PARAGRAPH TEXT ELEMENT
+
+            var textDisplaying = true;                                                          // CREATE A BOOLEAN VARIABLE AND ASSIGN IT THE VALUE OF TURE, SINCE BY DEFAULT THE CONTENT WILL DISPLAY ON PAGE LOAD
+            
+            $("#toggle").click(function() {
+                if (textDisplaying) {
+                    $("#toggle-text").fadeOut(function() {
+                        textDisplaying = false;
+                    });
+                } else {
+                    $("#toggle-text").fadeIn(function() {
+                        textDisplaying = true;
+                    });
+                }                                                                             // IF THE VARIABLE IS TRUE, PARSE THE FOLLOWING.... NB. - CHECKING THE DEFAULT VALUE DOESN'T REQUIRE THE == TRUE, THIS IS OPTIONAL      
+            });
