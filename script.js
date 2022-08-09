@@ -118,7 +118,7 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
 
 // FADING CONTENT IS A SPECIFIC EXAMPLE OF THE GENERAL ANIMATING CONTENT - SEE BELOW
 
-$("#circle").click(function () {                        // WHEN THE CIRCLE IS CLICKED, ANIMATE ITS WIDTH CHANGE TO 400px (ie. INCREASE ITS WIDTH TO 400px) OVER 2000ms
+/*$("#circle").click(function () {                        // WHEN THE CIRCLE IS CLICKED, ANIMATE ITS WIDTH CHANGE TO 400px (ie. INCREASE ITS WIDTH TO 400px) OVER 2000ms
     $(this).animate({                                   // CSS DECLARATIONS NEED TO BE PASSED AS ARRAYS USING {} AS THERE WILL LIKELY BE MULTIPLE DECLARATIONS
         width:"400px",                                  // CHANGE THE SELECTED CIRCLE'S WIDTH TO 400px
         height:"400px",                                 // CHANGE THE SELECTED CIRCLE'S HEIGHT TO 400px
@@ -127,4 +127,4 @@ $("#circle").click(function () {                        // WHEN THE CIRCLE IS CL
     }, 2000, function() {                               // SET A CALLBACK, WHICH CHANGES THE BACKGROUND OF THE SELECTED CIRCLE TO RED (VIA CSS) WHEN THE ANIMATION IS COMPLETE
         $(this).css("background-color", "red");
     });                                                 // ANIMATE THIS CHANGE OVER 2000ms (2s) - THE DURATION (ms) MUST ALSO BE ADDED, SO JQUERY KNOWS HOW LONG TO ANIMATE THE CHANGE FOR - ESSENTIAL
-});
+});*/
