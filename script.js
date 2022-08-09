@@ -119,5 +119,7 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
             // FADING CONTENT IS A SPECIFIC EXAMPLE OF THE GENERAL ANIMATING CONTENT - SEE BELOW
 
 $("#circle").click(function () {
-    $(this).animate({width:"400px"});           // CSS DECLARATIONS NEED TO BE PASSED AS ARRAYS USING {} AS THERE WILL LIKELY BE MULTIPLE
-})
+    $(this).animate({width:"400px"}, 2000);           // CSS DECLARATIONS NEED TO BE PASSED AS ARRAYS USING {} AS THERE WILL LIKELY BE MULTIPLE DECLARATIONS
+
+                                                // THE DURATION (ms) MUST ALSO BE ADDED, SO JQUERY KNOWS HOW LONG TO ANIMATE THE CHANGE FOR - ESSENTIAL
+});
