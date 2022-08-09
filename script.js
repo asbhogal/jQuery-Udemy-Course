@@ -121,6 +121,8 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
 $("#circle").click(function () {                        // WHEN THE CIRCLE IS CLICKED, ANIMATE ITS WIDTH CHANGE TO 400px (ie. INCREASE ITS WIDTH TO 400px) OVER 2000ms
     $(this).animate({                                   // CSS DECLARATIONS NEED TO BE PASSED AS ARRAYS USING {} AS THERE WILL LIKELY BE MULTIPLE DECLARATIONS
         width:"400px",                                  // CHANGE THE SELECTED CIRCLE'S WIDTH TO 400px
-        height:"400px"                                  // CHANGE THE SELECTED CIRCLE'S HEIGHT TO 400px
+        height:"400px",                                 // CHANGE THE SELECTED CIRCLE'S HEIGHT TO 400px
+        marginLeft:"100px",                             // NB. JS PROPERTIES ARE USED TO MAKE STYLING CHANGES, NOT THE CSS PROPERTIES (SOME ARE SIMILAR)
+        marginTop:"100px"
     }, 2000);                                           // ANIMATE THIS CHANGE OVER 2000ms (2s) - THE DURATION (ms) MUST ALSO BE ADDED, SO JQUERY KNOWS HOW LONG TO ANIMATE THE CHANGE FOR - ESSENTIAL
 });
