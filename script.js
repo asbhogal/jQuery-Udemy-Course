@@ -122,7 +122,9 @@ $("#circle").click(function () {                        // WHEN THE CIRCLE IS CL
     $(this).animate({                                   // CSS DECLARATIONS NEED TO BE PASSED AS ARRAYS USING {} AS THERE WILL LIKELY BE MULTIPLE DECLARATIONS
         width:"400px",                                  // CHANGE THE SELECTED CIRCLE'S WIDTH TO 400px
         height:"400px",                                 // CHANGE THE SELECTED CIRCLE'S HEIGHT TO 400px
-        marginLeft:"100px",                             // NB. JS PROPERTIES ARE USED TO MAKE STYLING CHANGES, NOT THE CSS PROPERTIES (SOME ARE SIMILAR)
+        marginLeft:"100px",                             // NB. JS PROPERTIES HERE ARE USED TO MAKE STYLING CHANGES, NOT THE CSS PROPERTIES (ONLY IN CASE OF .css)
         marginTop:"100px"
-    }, 2000);                                           // ANIMATE THIS CHANGE OVER 2000ms (2s) - THE DURATION (ms) MUST ALSO BE ADDED, SO JQUERY KNOWS HOW LONG TO ANIMATE THE CHANGE FOR - ESSENTIAL
+    }, 2000, function() {                               // SET A CALLBACK, WHICH CHANGES THE BACKGROUND OF THE SELECTED CIRCLE TO RED (VIA CSS) WHEN THE ANIMATION IS COMPLETE
+        $(this).css("background-color", "red");
+    });                                                 // ANIMATE THIS CHANGE OVER 2000ms (2s) - THE DURATION (ms) MUST ALSO BE ADDED, SO JQUERY KNOWS HOW LONG TO ANIMATE THE CHANGE FOR - ESSENTIAL
 });
