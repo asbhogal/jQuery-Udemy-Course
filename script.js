@@ -100,7 +100,7 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
 
             // METHOD TWO - USING A VARIABLE, WHICH KEEPS TRACK OF THE STATE OF THE PARAGRAPH TEXT ELEMENT ON THE PAGE AND PARSING INSTRUCTIONS AS A RESULT
 
-            var textDisplaying = true;                                                          // CREATE A BOOLEAN VARIABLE AND ASSIGN IT THE VALUE OF TRUE, SINCE BY DEFAULT THE CONTENT WILL DISPLAY ON PAGE LOAD
+            /*var textDisplaying = true;                                                          // CREATE A BOOLEAN VARIABLE AND ASSIGN IT THE VALUE OF TRUE, SINCE BY DEFAULT THE CONTENT WILL DISPLAY ON PAGE LOAD
             
             $("#toggle").click(function() {                                                     // WHEN THE TOGGLE BUTTON IS CLICKED, PERFORM THE FOLLOWING CONDITIONAL CHECK...
                 if (textDisplaying) {                                                           // IF THE VARIABLE IS TRUE, PARSE THE FOLLOWING... NB. - CHECKING THE DEFAULT VALUE OF THIS VARIABLE AGAINST TRUE DOESN'T REQUIRE THE == COMPARISON, AS BY DEFAULT IT IS TRUE. THIS IS THEREFORE OPTIONAL
@@ -112,8 +112,12 @@ $("#fadeInBtnTrigger").click(function () {                              // TO FI
                         textDisplaying = true;                                                  // CHANGE THE BOOLEAN VARIABLE BACK TO TRUE. THIS IS TO ENSURE THE CHECK THEN RETURNS BACK TO THE START, OTHERWISE THE CONDITIONS WON'T BE MET AND THE FADE-IN AND FADE-OUT WON'T PERFORM PROPERLY
                     });
                 }                                                                                
-            });
+            });*/
 
             // ALTHOUGH METHOD ONE IS GENERALLY NEATER, THERE ARE SITUATIONS WHERE THE INFORMATION CANNOT BE RETRIEVED FROM A CSS PROPERTY, MAKING METHOD TWO HERE IDEAL
 
             // FADING CONTENT IS A SPECIFIC EXAMPLE OF THE GENERAL ANIMATING CONTENT - SEE BELOW
+
+$("#circle").click(function () {
+    $(this).animate({width:"400px"});           // CSS DECLARATIONS NEED TO BE PASSED AS ARRAYS USING {} AS THERE WILL LIKELY BE MULTIPLE
+})
