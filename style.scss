@@ -1,16 +1,7 @@
 @import "partials/mixins";
 
-#circle {
-    @include div-sizing;
-    border-radius: 50%;
-    background-color: green;
-}
-
-.square {
-    @include div-sizing;
-    background-color: red;
-}
-
-p.fadeInText {
-    display: none;
+#draggable {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
 }
