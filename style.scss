@@ -1,8 +1,21 @@
 @import "partials/mixins";
 
-#draggable {
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#draggable,
+#vertical-only-draggable {
     width: 150px;
     height: 150px;
     padding: 10px;
     cursor: pointer;
+}
+
+#spacer {
+    width: 50px;
 }
