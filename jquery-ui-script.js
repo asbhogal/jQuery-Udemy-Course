@@ -16,3 +16,5 @@ $("#reset-btn").click(function () {
         left: "0px"
     });
 });
+
+$("#contained-draggable").draggable({containment: "#container"});   // PERMITS THE DRAGGABLE REGION TO ONLY THE INSIDE OF THE CONTAINER
