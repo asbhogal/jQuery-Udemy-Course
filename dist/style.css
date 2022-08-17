@@ -33,10 +33,11 @@ body {
 
 #container {
   border: 1px solid black;
-  position: absolute;
-  bottom: 250px;
+  position: relative;
   width: 1000px;
   height: 300px;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 #container #contained-draggable {
   position: absolute;
@@ -44,16 +45,28 @@ body {
   left: 40%;
 }
 
-#resizable-div {
-  position: absolute;
-  bottom: 55px;
+#resizable-div,
+#grid-resizable-div {
   width: 100px;
   height: 100px;
   border: 1px solid black;
 }
-#resizable-div p {
+#resizable-div p,
+#grid-resizable-div p {
   text-align: center;
   transform: translateY(40px);
+}
+
+#resizable-div {
+  position: absolute;
+  left: 5%;
+  top: 445px;
+}
+
+#grid-resizable-div {
+  position: absolute;
+  left: 15%;
+  top: 445px;
 }
 
 #spacer {
