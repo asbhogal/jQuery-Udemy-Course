@@ -36,13 +36,25 @@ body {
 #container {
     border: 1px solid black;
     position: absolute;
-    bottom: 30px;
+    bottom: 250px;
     width: 1000px;
     height: 300px;
     #contained-draggable {
         position: absolute;
         bottom: 25%;
         left: 40%;
+    }
+}
+
+#resizable-div {
+    position: absolute;
+    bottom: 55px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    p {
+        text-align: center;
+        transform: translateY(40px);
     }
 }
 
