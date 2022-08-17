@@ -58,3 +58,6 @@ $("#initial-resizer").resizable({
  // PASSING THE event PARAMETER AND RUNNING A CONSOLE LOG ON IT WILL SHOW MANY PROPERTIES AND VALUES, INCL. toElement ie. THE ELEMENT IT WAS DRAGGED TO
 
  $("#accordion").accordion();
+
+ $("#sortable-list").sortable();
+

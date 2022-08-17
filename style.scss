@@ -121,3 +121,15 @@ body {
     padding-top: 800px;
     padding-bottom: 50px;
 }
+
+#sortable-list {
+    position: absolute;
+    padding-top: 1100px;
+    padding-bottom: 40px;
+    list-style-type: none;
+    width: 70%;
+    li {
+        padding: 20px 0;
+        cursor: pointer;
+    }
+}
