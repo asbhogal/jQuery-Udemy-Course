@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: max-content;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -109,4 +113,11 @@ body {
 
 #also-resizes {
     top: 555px;
+}
+
+#accordion {
+    position: absolute;
+    margin: 0 90px;
+    padding-top: 800px;
+    padding-bottom: 50px;
 }
