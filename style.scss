@@ -73,3 +73,19 @@ body {
 #spacer {
     width: 50px;
 }
+
+#initial-resizer,
+#also-resizes {
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#initial-resizer {
+    top: 445px;
+}
+
+#also-resizes {
+    top: 555px;
+}
