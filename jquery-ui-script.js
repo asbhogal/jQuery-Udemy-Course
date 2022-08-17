@@ -50,6 +50,8 @@ $("#initial-resizer").resizable({
  $("#small-box").draggable();                                   // SET THE DIV TO BE DRAGGED WITH THE .draggable PROPERTY
  $("#main-box").droppable({                                     // SET THE DIV TO HAVE THE OTHER DIV DROPPED INTO WITH THE .droppable PROPERTY
     drop: function() {                                          // WHEN THE DRAGGABLE DIV IS MOVED TO THE DROPPABLE DIV, PARSE THE FOLLOWING DROP FUNCTION
-        $("#main-box").css("background-color", "red");          // CHANGE THE css PROPERTY OF background-color OF THE DROPPABLE DIV TO RED
+        $("#main-box").css("background-color", "red");          // CHANGE THE css PROPERTY OF background-color OF THE DROPPABLE DIV TO RED. MANY ACTIONS CAN BE PLACED HERE.
     }
  })
+
+ // THE event AND ui PARAMETERS CAN BE PASSED TO THIS drop FUNCTION - SEE THE API DOCUMENTATION
