@@ -46,3 +46,10 @@ $("#initial-resizer").resizable({
 // THE FUNCTION LOOKS FOR AOCCURS DURING THE RESIZING OF THE DIV AND PARSES THE FOLLOWING ON LINE 39 IF THE CONDITION STATED ON THE LINE ABOVE IS FULFILLED
 // THIS IS AN EXAMPLE OF HOW TO LEVERAGE CALLBACK FUNCTIONS TO CHANGE THE FLOW, BEHAVIOUR OR CONTENT OF A PAGE TRIGGERED BY A PREVIOUS ACTION
  // ADDING $("also-resizes").resizable; WILL ALSO ALLOW THE DIV TO BE MANUALLY ADJUSTED DIRECTLY
+
+ $("#small-box").draggable();                                   // SET THE DIV TO BE DRAGGED WITH THE .draggable PROPERTY
+ $("#main-box").droppable({                                     // SET THE DIV TO HAVE THE OTHER DIV DROPPED INTO WITH THE .droppable PROPERTY
+    drop: function() {                                          // WHEN THE DRAGGABLE DIV IS MOVED TO THE DROPPABLE DIV, PARSE THE FOLLOWING DROP FUNCTION
+        $("#main-box").css("background-color", "red");          // CHANGE THE css PROPERTY OF background-color OF THE DROPPABLE DIV TO RED
+    }
+ })

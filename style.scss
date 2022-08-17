@@ -78,11 +78,32 @@ body {
 #also-resizes {
     width: 400px;
     height: 100px;
+    left: 25%;
     border: 1px solid black;
     position: absolute;
 }
 
 #initial-resizer {
+    top: 445px;
+}
+
+#main-box {
+    background-color: grey;
+    height: 160px;
+    width: 160px;
+    right: 10%;
+}
+
+#small-box {
+    background-color: yellow;
+    height: 80px;
+    width: 80px;
+    right: 40%;
+}
+
+#main-box,
+#small-box {
+    position: absolute;
     top: 445px;
 }
 
